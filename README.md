@@ -4,13 +4,13 @@
 - I'm using python 3.9.5 for this project. 
 - To set up this project with pyenv and virtualenv, use **Method 1**
 - If you want to try asdf and poetry, see **Method 2** below. 
-Note that these instructions for installing the python version and it's dependencies may not be perfect.  
-    - The goel for a proper setup is to:
+### Note that these instructions for installing the python version and it's dependencies may not be perfect.  You may hit some bumps along the way.   Do your best to achieve the following:
+- The goel for a proper setup is to:
     - Startup a virtual environment with python 3.9.5
     - Install the python dependencies
-    - How ever you choose to do this is up to you.   
-    - You can try my **Method 1** or **Method 2** or some other method you preferr. 
-    - I've included both a **requirements** file and a **pyproject.tom** file. 
+    - However you choose to do this is up to you.   
+    - You can try my **Method 1** or **Method 2** or some other method you prefer. 
+    - I've included both a **requirements** file and a **pyproject.toml** file. 
     - It is up to you to either use pip or poetry to install the dependencies. 
 
 
@@ -28,12 +28,13 @@ pip install -r requirements.txt
 ```
 
 ## Method 2: asdf and poetry:
-- I prefer to use asdf and poetry.   You'll see there's a .tools-versions file in the root dir.   
+I prefer to use asdf and poetry.   
+- You'll see there's a .tools-versions file in the root dir.   
 - This file is referenced when you run **asdf install**.   
 - Python 3.9.5 is defined in the .tools-versions file.   
 - This is how asdf install will know to install python 3.9.5.
 
-Install asdf
+### Install asdf
 ```bash
 # Clone the asdf repository
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
@@ -47,9 +48,10 @@ asdf plugin add python
 asdf install
 python          # should startup a python 3.9.5 repl
 ctrl-d          # exit from the repl
+```
 
-
-# Install Poetry
+### Install Poetry
+```bash
 curl -sSL https://install.python-poetry.org | python3 -
 
 # Configure Poetry to create virtual environments in the project directory
@@ -65,8 +67,9 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ```
 
 ## If using vscode, you need to point to this virtual environment. 
-- You can copy and paste the "Executable** path from the above **poetry env info** command into your command pallette.  
-- I believe the **__pycache__** folder gets created at this point. 
+- You can copy and paste the "Executable** path from the above **poetry env info** command into your command pallette virtual env path. 
+- If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
+- In vscode, the **__pycache__** folder gets created at this point. 
 
 ## Running the faker_script_dupes2.py:
 ```bash
