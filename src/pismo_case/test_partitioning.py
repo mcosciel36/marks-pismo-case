@@ -14,7 +14,7 @@ def test_parquet_partitioning():
     assert "event_type" in df.columns
 
     # Check if the directory structure follows the partitioning
-    partitions = ["src/pismo_case/output_directory/year=2021/month=04/day=19/event_type=created"]
+    partitions = ["src/pismo_case/output_directory/year=2021/month=04/day=24/event_type=updated"]
     for partition in partitions:
         assert os.path.exists(partition)
 

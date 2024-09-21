@@ -87,9 +87,10 @@ event type.
 # Click on the pyspark_script.py and hit play in vscode
 # or
 cd src/pismo_case
-python pyspark_script.py
+python pyspark_script.py            # The src/pismo_case/output_director gets created
 ```
 
 # Run the pytests
 - **test_partitioning.py** tests the partitioning strategy
 - **test_faker_script** tests the dataset model created and the dupes are created
+- There's also a 
