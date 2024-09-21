@@ -91,6 +91,12 @@ python pyspark_script.py            # The src/pismo_case/output_director gets cr
 ```
 
 # Run the pytests
-- **test_partitioning.py** tests the partitioning strategy
-- **test_faker_script** tests the dataset model created and that dupes are created
+- **test_partitioning.py** tests the partitioning strategy is correct in the output_directory
+- **test_faker_script_dupes2.py** tests the dataset model created and that dupes are created
+- **test_dedupe_pyspark_script.py** tests that dupes are removed keeping only the latest
 - There's also a **pyspark_script_verify.py** that can be used to read in from the **output_directory** to verify the output data.  I read in the parquet and write out json for readability. 
+
+
+# Summary
+- This code generated test data in json format.
+- It creates dupes 
