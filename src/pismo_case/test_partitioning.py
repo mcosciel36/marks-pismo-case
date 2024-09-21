@@ -1,5 +1,7 @@
-from pyspark.sql import SparkSession
 import os
+
+from pyspark.sql import SparkSession
+
 
 def test_parquet_partitioning():
     spark = SparkSession.builder.appName("Test").getOrCreate()
@@ -14,7 +16,9 @@ def test_parquet_partitioning():
     assert "event_type" in df.columns
 
     # Check if the directory structure follows the partitioning
-    partitions = ["src/pismo_case/output_directory/year=2021/month=04/day=24/event_type=updated"]
+    partitions = [
+        "src/pismo_case/output_directory/year=2021/month=04/day=24/event_type=updated"  # noqa
+    ]
     for partition in partitions:
         assert os.path.exists(partition)
 
