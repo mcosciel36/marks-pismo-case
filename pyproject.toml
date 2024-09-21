@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "marks-pismo-case"
+version = "0.1.0"
+description = ""
+authors = ["Mark Cosciello <mark.cosciello@paramount.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[tool.poetry.group.dev.dependencies]
+faker = "^29.0.0"
+pytest = "^8.3.3"
+pyspark = "^3.5.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
