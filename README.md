@@ -4,8 +4,8 @@
 - I'm using python 3.9.5 for this project. 
 - To set up this project with pyenv and virtualenv, use **Method 1**
 - If you want to try asdf and poetry, see **Method 2** below. 
-### Note that these instructions for installing the python version and it's dependencies may not be perfect.  You may hit some bumps along the way.   Do your best to achieve the following:
-- The goel for a proper setup is to:
+### Note that these instructions for installing the python version and its dependencies may not be perfect.  You may hit some bumps along the way.   Do your best to achieve the following:
+- The goal for a proper setup is to:
     - Startup a virtual environment with python 3.9.5
     - Install the python dependencies
     - However you choose to do this is up to you.   
@@ -67,7 +67,7 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ```
 
 ## If using vscode, you need to point to this virtual environment. 
-- You can copy and paste the "Executable** path from the above **poetry env info** command into your command pallette virtual env path. 
+- You can copy and paste the "Executable** path from the above **poetry env info** command into your command palette virtual env path. 
 - If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
 - In vscode, the **__pycache__** folder gets created at this point. 
 
