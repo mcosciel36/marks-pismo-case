@@ -71,7 +71,7 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 - If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
 - In vscode, the **__pycache__** folder gets created at this point. 
 
-## Running the faker_script_dupes2.py:
+# Running the faker_script_dupes2.py:
 ```bash
 # click on the "faker_script_dupes2.py" file and hit the play button in vs code
 # or do the following:
