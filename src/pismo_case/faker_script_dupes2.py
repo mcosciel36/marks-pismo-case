@@ -6,6 +6,11 @@ import json
 
 fake = Faker()
 
+# Set the seed for both Faker and random for reproducibility
+seed_value = 42  # You can choose any number here
+Faker.seed(seed_value)
+random.seed(seed_value)
+
 def generate_event(event_id=None):
     # If event_id is None, generate a new event_id; otherwise, reuse the passed event_id
     event_id = event_id if event_id else str(uuid.uuid4())
@@ -48,7 +53,7 @@ def generate_events(num_events=10, duplicate_ratio=0.5):
     return events
 
 # Generate the events
-events = generate_events(num_events=10, duplicate_ratio=0.1)
+events = generate_events(num_events=10, duplicate_ratio=0.5)
 
 # Save the events to a file with newline-separated JSON rows
 with open('events.json', 'w') as f:
