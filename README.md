@@ -1,4 +1,11 @@
 # Pismo Case
+
+
+## Summary
+- This code generates test data in json format.
+- It creates duplicate records that need to be excluded in the output directory.  Only the latest unique records should be kept. 
+- Spark reads the json data into a dataframe, pulls the latest versions of each record and writes out to a directory using hive partitioning strategy. 
+
 ## Project Setup
 
 - I'm using python 3.9.5 for this project. 
@@ -6,8 +13,8 @@
 - If you want to try asdf and poetry, see **Method 2** below. 
 ### Note that these instructions for installing the python version and its dependencies may not be perfect.  You may hit some bumps along the way.   Do your best to achieve the following:
 - The goal for a proper setup is to:
-    - Startup a virtual environment with python 3.9.5
-    - Install the python dependencies
+    - Startup a virtual environment with python 3.9.5.
+    - Install the python dependencies.
     - However you choose to do this is up to you.   
     - You can try my **Method 1** or **Method 2** or some other method you prefer. 
     - I've included both a **requirements** file and a **pyproject.toml** file. 
@@ -91,12 +98,7 @@ python pyspark_script.py            # The src/pismo_case/output_director gets cr
 ```
 
 # Run the pytests
-- **test_partitioning.py** tests the partitioning strategy is correct in the output_directory
-- **test_faker_script_dupes2.py** tests the dataset model created and that dupes are created
-- **test_dedupe_pyspark_script.py** tests that dupes are removed keeping only the latest
-- There's also a **pyspark_script_verify.py** that can be used to read in from the **output_directory** to verify the output data.  I read in the parquet and write out json for readability. 
-
-
-# Summary
-- This code generated test data in json format.
-- It creates dupes 
+- **test_partitioning.py** tests the partitioning strategy is correct in the output_directory.
+- **test_faker_script_dupes2.py** tests the dataset model created is correct.  It also tests that dupes are created.
+- **test_dedupe_pyspark_script.py** tests that dupes are removed keeping only the latest.
+- There's also a **pyspark_script_verify.py** that can be used to read in from the .**output_directory** to verify the output data.  I read in the parquet and write out json for readability.
