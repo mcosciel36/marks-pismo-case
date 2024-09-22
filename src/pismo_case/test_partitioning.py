@@ -7,7 +7,7 @@ def test_parquet_partitioning():
     spark = SparkSession.builder.appName("Test").getOrCreate()
 
     # Assuming that the Parquet files are written in the 'output_directory'
-    df = spark.read.parquet("src/pismo_case/output_directory")
+    df = spark.read.parquet("output_directory")
 
     # Ensure partition columns exist
     assert "year" in df.columns
@@ -17,7 +17,7 @@ def test_parquet_partitioning():
 
     # Check if the directory structure follows the partitioning
     partitions = [
-        "src/pismo_case/output_directory/year=2021/month=04/day=24/event_type=updated"  # noqa
+        "output_directory/year=2021/month=04/day=24/event_type=updated"  # noqa
     ]
     for partition in partitions:
         assert os.path.exists(partition)

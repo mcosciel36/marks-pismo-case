@@ -76,7 +76,6 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ## If using vscode, you need to point to this virtual environment. 
 - You can copy and paste the "Executable** path from the above **poetry env info** command into your command palette virtual env path. 
 - If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
-- In vscode, the **__pycache__** folder gets created at this point. 
 
 # Running the faker_script_dupes2.py:
 ```bash

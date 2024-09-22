@@ -60,6 +60,10 @@ def generate_events(num_events=10, duplicate_ratio=0.5):
 events = generate_events(num_events=10, duplicate_ratio=0.5)
 
 # Save the events to a file with newline-separated JSON rows
-with open("events.json", "w") as f:
+from pathlib import Path
+
+# Ensure the directory exists
+Path("src/pismo_case").mkdir(parents=True, exist_ok=True)
+with open("src/pismo_case/events.json", "w") as f:
     for event in events:
         f.write(json.dumps(event) + "\n")

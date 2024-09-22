@@ -5,8 +5,14 @@ from pyspark.sql.window import Window
 # Initialize Spark session
 spark = SparkSession.builder.appName("EventProcessor").getOrCreate()
 
+# Save the events to a file with newline-separated JSON rows
+from pathlib import Path
+
+# Ensure the directory exists
+Path("src/pismo_case").mkdir(parents=True, exist_ok=True)
+
 # Load the data
-df = spark.read.json("events.json")
+df = spark.read.json("src/pismo_case/events.json")
 
 # Deduplication: Keep the latest event by event_id
 window_spec = Window.partitionBy("event_id").orderBy(col("timestamp").desc())

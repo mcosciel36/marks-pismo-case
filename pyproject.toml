@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Mark Cosciello <mark.cosciello@paramount.com>"]
 readme = "README.md"
+packages = [{include = "pismo_case", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"

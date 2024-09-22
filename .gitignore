@@ -1,0 +1,14 @@
+# Ignore the output and json directories
+json_output_directory/
+output_directory/
+
+# Ignore .DS_Store files (common macOS system files)
+**/.DS_Store
+
+# Ignore Python bytecode files and cache directories
+src/pismo_case/__pycache__/
+**/__pycache__/
+
+# Ignore events.json file
+src/pismo_case/events.json
+
