@@ -6,7 +6,7 @@
 - It creates duplicate records that need to be excluded in the output directory.  Only the latest unique records should be kept. 
 - Spark reads the json data into a dataframe, pulls the latest versions of each record and writes out to a directory using hive partitioning strategy. 
 
-## Project Setup
+# Project Setup
 
 - I'm using python 3.9.5 for this project. 
 - To set up this project with pyenv and virtualenv, use **Method 1**
@@ -73,18 +73,19 @@ poetry shell                            # to enter the poetry virtual environmen
 pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ```
 
-# If using vscode, you need to point to this virtual environment. 
+## If using vscode, you need to point to this virtual environment. 
 - You can copy and paste the "Executable** path from the above **poetry env info** command into your command palette virtual env path. 
 - If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
 
-# Running the faker_script_dupes2.py:
+# Code Execution
+## Running the faker_script_dupes2.py:
 ```bash
 # click on the "faker_script_dupes2.py" file and hit the play button in vs code
 # or do the following:
 cd src/pismo_case
 python faker_script_dupes2.py       # The events.json gets created with dupes
 ```
-# Now run the pyspark script that will read in this events.json file and then: 
+## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
 - Keep only the latest version for duplicate events.
 - In the output directory we use partitioning by event date (year, month, day) and
@@ -96,7 +97,7 @@ cd src/pismo_case
 python pyspark_script.py            # The src/pismo_case/output_director gets created
 ```
 
-# Run the pytests
+## Run the pytests
 - **test_partitioning.py** tests the partitioning strategy is correct in the output_directory.
 - **test_faker_script_dupes2.py** tests the dataset model created is correct.  It also tests that dupes are created.
 - **test_dedupe_pyspark_script.py** tests that dupes are removed keeping only the latest.
