@@ -82,7 +82,7 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ```bash
 # click on the "faker_script_dupes2.py" file and hit the play button in vs code
 # or do the following:
-python ./src/pismo_case/faker_script_dupes2.py  # The events.json gets created with dupes
+python ./src/pismo_case/faker_script_dupes2.py  # The /src/pismo_case/events.json gets created with dupes
 ```
 ## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
@@ -92,7 +92,7 @@ event type.
 ```bash
 # Click on the pyspark_script.py and hit play in vscode
 # or
-python ./src/pismo_case/pyspark_script.py   # The src/pismo_case/output_director gets created
+python ./src/pismo_case/pyspark_script.py   # The output_director gets created
 ```
 
 ## Run the pytests
