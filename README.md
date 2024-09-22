@@ -73,7 +73,7 @@ poetry shell                            # to enter the poetry virtual environmen
 pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ```
 
-## If using vscode, you need to point to this virtual environment. 
+### If using vscode, you need to point to this virtual environment. 
 - You can copy and paste the "Executable** path from the above **poetry env info** command into your command palette virtual env path. 
 - If using virtualenv, you can do the same.  Copy the path to the env into your vscode virtual env path.
 
@@ -81,9 +81,6 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 ## Running the faker_script_dupes2.py:
 ```bash
 # click on the "faker_script_dupes2.py" file and hit the play button in vs code
-# or do the following:
-cd src/pismo_case
-python faker_script_dupes2.py       # The events.json gets created with dupes
 ```
 ## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
@@ -92,9 +89,6 @@ python faker_script_dupes2.py       # The events.json gets created with dupes
 event type.
 ```bash
 # Click on the pyspark_script.py and hit play in vscode
-# or
-cd src/pismo_case
-python pyspark_script.py            # The src/pismo_case/output_director gets created
 ```
 
 ## Run the pytests
