@@ -84,7 +84,8 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 # or do the following:
 python ./src/pismo_case/faker_script_dupes2.py  # The /src/pismo_case/events.json gets created with dupes
 ```
-- The faker script is configured to create 10 records with a duplication ration of 50%.   You can modify this in this line of code:
+- The faker script is configured to create 10 records with a duplication ration of 50%.  You may want to set this to something like 1000 and 0.1 to get a larger sample.   A larger sample is needed in order to see that we've properly broken out data into year, month, day and event_typy.  If the sample is too small you may not see different event types getting created on the same, randomly selected day.   
+You can modify this in this line of code:
 
 ```bash
 # Generate the events
