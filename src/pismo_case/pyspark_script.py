@@ -1,12 +1,10 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, row_number
 from pyspark.sql.window import Window
+from pathlib import Path
 
 # Initialize Spark session
 spark = SparkSession.builder.appName("EventProcessor").getOrCreate()
-
-# Save the events to a file with newline-separated JSON rows
-from pathlib import Path
 
 # Ensure the directory exists
 Path("src/pismo_case").mkdir(parents=True, exist_ok=True)

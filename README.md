@@ -84,6 +84,13 @@ pip freeze |grep pyspark                # you should see pyspark==3.5.2
 # or do the following:
 python ./src/pismo_case/faker_script_dupes2.py  # The /src/pismo_case/events.json gets created with dupes
 ```
+- The faker script is configured to create 10 records with a duplication ration of 50%.   You can modify this in this line of code:
+
+```bash
+# Generate the events
+events = generate_events(num_events=10, duplicate_ratio=0.5)
+```
+
 ## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
 - Keep only the latest version for duplicate events.
