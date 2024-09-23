@@ -2,7 +2,7 @@
 name = "marks-pismo-case"
 version = "0.1.0"
 description = ""
-authors = ["Mark Cosciello <mark.cosciello@paramount.com>"]
+authors = ["Mark Cosciello <markcosciello@yahoo.com>"]
 readme = "README.md"
 packages = [{include = "pismo_case", from = "src"}]
 
