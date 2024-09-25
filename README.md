@@ -32,6 +32,12 @@ pyenv virtualenv 3.9.5 myenv
 ls ~/.pyenv/versions/myenv
 pyenv activate myenv
 pip install -r requirements-dev.txt
+
+# Or you can try venv as an alternative to pyenv
+# Insure you're using python 3.9 before using this alternative
+python -m venv test-env
+source test-env/bin/activate
+pip install -r requirements-dev.txt
 ```
 
 ## Method 2: asdf and poetry:
