@@ -17,7 +17,7 @@
     - Install the python dependencies.
     - However you choose to do this is up to you.   
     - You can try my **Method 1** or **Method 2** or some other method you prefer. 
-    - I've included both a **requirements** file and a **pyproject.toml** file. 
+    - I've included both a **requirements-dev.txt** file and a **pyproject.toml** file. 
     - It is up to you to either use pip or poetry to install the dependencies. 
 
 
@@ -31,7 +31,7 @@ pyenv local 3.9.5
 pyenv virtualenv 3.9.5 myenv
 ls ~/.pyenv/versions/myenv
 pyenv activate myenv
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
 
 ## Method 2: asdf and poetry:
