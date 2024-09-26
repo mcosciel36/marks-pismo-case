@@ -97,7 +97,8 @@ You can modify this in this line of code:
 # Generate the events
 events = generate_events(num_events=10, duplicate_ratio=0.5)
 ```
-**Note** The faker script uses a seed for repeatability.   But, if and when you change the above line of code there's no guarantee the **test_parquet_partitioning** test will pass.   I've verified it does pass for num_events = 10 or 1000 and duplicate_ratio = 0.5 or 0.1 correspondingly.   If you change to some other values you will need to modify the **test_parquet_partitioning** to reflect a year, month, day, event type that is found in the output_directory. 
+**Note** The faker script uses a seed for repeatability.   But, if and when you change the above line of code, the repeatability is changed based on the new sample size.   If the code changes there's no guarantee the **test_parquet_partitioning** test will pass.  
+I've verified it does pass for num_events = 10 or 1000 and duplicate_ratio = 0.5 or 0.1 correspondingly.   If you change to some other values you will need to modify the **test_parquet_partitioning** to reflect any specified year, month, day, event type that is found in the output_directory.  It's very easy to modify this test.  You'll see what i'm talking about and how to change it when you look at the test. 
 
 ## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
