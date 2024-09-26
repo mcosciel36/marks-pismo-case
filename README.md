@@ -97,6 +97,7 @@ You can modify this in this line of code:
 # Generate the events
 events = generate_events(num_events=10, duplicate_ratio=0.5)
 ```
+**Note** The faker script uses a seed for repeatability.   But, if and when you change the above line of code there's no guarantee the **test_partitionin** test will pass.   I've verified it does pass for num_events = 10 or 1000 and duplicate_ratio = 0.5 or 0.1 correspondingly.   If you change to some other values you will need to modify the **test_partitioning.py** to reflect a year, month, day, event type that is found in the output_directory. 
 
 ## Now run the pyspark script that will read in this events.json file and then: 
 - Output files in Parquet format.
