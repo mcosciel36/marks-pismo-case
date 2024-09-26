@@ -57,7 +57,7 @@ def generate_events(num_events=10, duplicate_ratio=0.5):
 
 
 # Generate the events
-events = generate_events(num_events=1000, duplicate_ratio=0.1)
+events = generate_events(num_events=10, duplicate_ratio=0.5)
 
 # Save the events to a file with newline-separated JSON rows
 from pathlib import Path

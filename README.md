@@ -15,7 +15,7 @@
 - The goal for a proper setup is to:
     - Startup a virtual environment with python 3.9.5.
     - Install the python dependencies.
-    - However you choose to do this is up to you.   
+        - However you choose to do this is up to you.   
     - You can try my **Method 1** or **Method 2** or some other method you prefer. 
     - I've included both a **requirements-dev.txt** file and a **pyproject.toml** file. 
     - It is up to you to either use pip or poetry to install the dependencies. 
