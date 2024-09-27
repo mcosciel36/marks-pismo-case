@@ -116,3 +116,7 @@ python ./src/pismo_case/pyspark_script.py   # The output_director gets created
 - **test_faker_script_dupes2.py** tests the dataset model created is correct.  It also tests that dupes are created.
 - **test_dedupe_pyspark_script.py** tests that dupes are removed keeping only the latest.
 - There's also a **pyspark_script_verify.py** that can be used to read in from the .**output_directory** to verify the output data.  I read in the parquet and write out json for readability.
+
+
+# Contact Info
+If you have any questions or need assistance, you can contact me through [LinkedIn Profile](https://github.com/mcosciel36/marks-pismo-case)
