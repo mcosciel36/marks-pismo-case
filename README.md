@@ -119,4 +119,4 @@ python ./src/pismo_case/pyspark_script.py   # The output_director gets created
 
 
 # Contact Info
-If you have any questions or need assistance, you can contact me through [LinkedIn Profile](https://github.com/mcosciel36/marks-pismo-case)
+If you have any questions or need assistance, you can contact me through [LinkedIn Profile](https://www.linkedin.com/in/mark-cosciello-a3b5918/)
