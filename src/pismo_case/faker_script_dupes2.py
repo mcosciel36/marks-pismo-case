@@ -1,22 +1,24 @@
 import json
 import random
 import uuid
-
 from faker import Faker
+from datetime import datetime
 
+# Initialize Faker and random with a seed for reproducibility
 fake = Faker()
-
-# Set the seed for both Faker and random for reproducibility
-seed_value = 42  # You can choose any number here
+seed_value = 42
 Faker.seed(seed_value)
 random.seed(seed_value)
 
-
 def generate_event(event_id=None):
-    # If event_id is None, generate a new event_id; otherwise, reuse
-    # the passed event_id
-    event_id = event_id if event_id else str(uuid.uuid4())
-    timestamp = fake.date_time_this_decade().isoformat()
+    # Generate a deterministic event_id based on the event data
+    if event_id is None:
+        event_id = str(uuid.uuid4())  # UUID generation is still random
+
+    # Generate a deterministic date with Faker's date_time_between()
+    # This date will always be between a fixed range, e.g., between 2020-01-01 and 2020-12-31
+    timestamp = fake.date_time_between(start_date="-5y", end_date="now").isoformat()
+
     domain = random.choice(["account", "transaction"])
     event_type = random.choice(["status-change", "created", "updated"])
     data = {
