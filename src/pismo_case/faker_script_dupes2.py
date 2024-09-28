@@ -15,9 +15,11 @@ def generate_event(event_id=None):
     if event_id is None:
         event_id = str(uuid.uuid4())  # UUID generation is still random
 
-    # Generate a deterministic date with Faker's date_time_between()
-    # This date will always be between a fixed range, e.g., between 2020-01-01 and 2020-12-31
-    timestamp = fake.date_time_between(start_date="-5y", end_date="now").isoformat()
+    # Use fixed start and end dates to ensure reproducible results
+    start_date = datetime(2020, 1, 1)  # Fixed start date
+    end_date = datetime(2024, 10, 27)  # Fixed end date
+    timestamp = fake.date_time_between(start_date=start_date, end_date=end_date).isoformat()
+
 
     domain = random.choice(["account", "transaction"])
     event_type = random.choice(["status-change", "created", "updated"])
